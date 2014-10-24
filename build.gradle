@@ -1,12 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-main {
-	java {
-		srcDir 'src'
-	}
-}
-
 sourceCompatibility = 1.6
 
 repositories {
