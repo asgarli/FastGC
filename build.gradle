@@ -1,7 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-sourceCompatibility = 1.6
+sourceCompatibility = JavaVersion.VERSION_1_6
+sourceCompatibility = JavaVersion.VERSION_1_6
 
 repositories {
     mavenCentral()
@@ -9,4 +10,5 @@ repositories {
 
 dependencies {
     compile 'commons-io:commons-io:1.4'
+    compile files('extlibs/jargs.jar')
 }
