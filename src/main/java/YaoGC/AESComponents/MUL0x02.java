@@ -2,7 +2,8 @@
 
 package YaoGC.AESComponents;
 
-import YaoGC.*;
+import YaoGC.CompositeCircuit;
+import YaoGC.XOR_2_1;
 
 class MUL0x02 extends CompositeCircuit {
 

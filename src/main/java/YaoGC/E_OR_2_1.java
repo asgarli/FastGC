@@ -2,8 +2,9 @@
 
 package YaoGC;
 
-import java.math.*;
-import Cipher.*;
+import java.math.BigInteger;
+
+import Cipher.Cipher;
 
 class E_OR_2_1 extends OR_2_1 {
     public E_OR_2_1() {

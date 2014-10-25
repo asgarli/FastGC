@@ -2,7 +2,9 @@
 
 package YaoGC.AESComponents;
 
-import YaoGC.*;
+import YaoGC.Circuit;
+import YaoGC.CompositeCircuit;
+import YaoGC.State;
 
 public class SBox extends CompositeCircuit {
     private static final byte Inv = 0;

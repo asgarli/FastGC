@@ -19,7 +19,9 @@
    
 package YaoGC;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observer;
    
 /**
  * Observable is used to notify a group of Observer objects when a change

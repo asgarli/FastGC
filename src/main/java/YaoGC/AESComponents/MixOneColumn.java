@@ -2,7 +2,8 @@
 
 package YaoGC.AESComponents;
 
-import YaoGC.*;
+import YaoGC.CompositeCircuit;
+import YaoGC.XOR_2L_L;
 
 public class MixOneColumn extends CompositeCircuit {
 

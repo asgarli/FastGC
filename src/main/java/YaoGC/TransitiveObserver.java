@@ -17,6 +17,8 @@
    
 package YaoGC;
 
+import java.util.Observable;
+
    
 /**
  * {@code Observer} is the interface to be implemented by objects that 

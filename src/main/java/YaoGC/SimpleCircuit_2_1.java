@@ -2,9 +2,10 @@
 
 package YaoGC;
 
-import java.math.*;
+import java.math.BigInteger;
+
 import Cipher.Cipher;
-import Utils.*;
+import Utils.Utils;
 
 public abstract class SimpleCircuit_2_1 extends Circuit {
 

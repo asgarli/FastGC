@@ -14,47 +14,46 @@ public class HammingDistanceClient extends ProgClient {
     private State outputState;
 
     public HammingDistanceClient(BigInteger bv, int length) {
-	cBits = bv;
-	HammingDistanceCommon.bitVecLen = length;
+        cBits = bv;
+        HammingDistanceCommon.bitVecLen = length;
     }
 
     protected void init() throws Exception {
-    	HammingDistanceCommon.bitVecLen = HammingDistanceCommon.ois.readInt();
-	
-	HammingDistanceCommon.initCircuits();
+        HammingDistanceCommon.bitVecLen = HammingDistanceCommon.ois.readInt();
 
-    	otNumOfPairs = HammingDistanceCommon.bitVecLen;
+        HammingDistanceCommon.initCircuits();
 
-    	super.init();
+        otNumOfPairs = HammingDistanceCommon.bitVecLen;
+
+        super.init();
     }
 
     protected void execTransfer() throws Exception {
-	sBitslbs = new BigInteger[HammingDistanceCommon.bitVecLen];
+        sBitslbs = new BigInteger[HammingDistanceCommon.bitVecLen];
 
-	for (int i = 0; i < HammingDistanceCommon.bitVecLen; i++) {
-	    int bytelength = (Wire.labelBitLength-1)/8 + 1;
-	    sBitslbs[i]   = Utils.readBigInteger(bytelength, HammingDistanceCommon.ois);
-	}
-	StopWatch.taskTimeStamp("receiving labels for peer's inputs");
+        for (int i = 0; i < HammingDistanceCommon.bitVecLen; i++) {
+            int bytelength = (Wire.labelBitLength - 1) / 8 + 1;
+            sBitslbs[i] = Utils.readBigInteger(bytelength, HammingDistanceCommon.ois);
+        }
+        StopWatch.taskTimeStamp("receiving labels for peer's inputs");
 
-	cBitslbs = new BigInteger[HammingDistanceCommon.bitVecLen];
-	rcver.execProtocol(cBits);
-	cBitslbs = rcver.getData();
-	StopWatch.taskTimeStamp("receiving labels for self's inputs");
+        cBitslbs = new BigInteger[HammingDistanceCommon.bitVecLen];
+        rcver.execProtocol(cBits);
+        cBitslbs = rcver.getData();
+        StopWatch.taskTimeStamp("receiving labels for self's inputs");
     }
 
     protected void execCircuit() throws Exception {
-	outputState = HammingDistanceCommon.execCircuit(sBitslbs, cBitslbs);
+        outputState = HammingDistanceCommon.execCircuit(sBitslbs, cBitslbs);
     }
 
-
     protected void interpretResult() throws Exception {
-	HammingDistanceCommon.oos.writeObject(outputState.toLabels());
-	HammingDistanceCommon.oos.flush();
+        HammingDistanceCommon.oos.writeObject(outputState.toLabels());
+        HammingDistanceCommon.oos.flush();
     }
 
     protected void verify_result() throws Exception {
-	HammingDistanceCommon.oos.writeObject(cBits);
-	HammingDistanceCommon.oos.flush();
+        HammingDistanceCommon.oos.writeObject(cBits);
+        HammingDistanceCommon.oos.flush();
     }
 }

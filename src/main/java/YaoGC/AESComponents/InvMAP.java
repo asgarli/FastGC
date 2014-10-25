@@ -2,7 +2,9 @@
 
 package YaoGC.AESComponents;
 
-import YaoGC.*;
+import YaoGC.CompositeCircuit;
+import YaoGC.XOR_2_1;
+import YaoGC.XOR_L_1;
 
 class InvMAP extends CompositeCircuit {
     private static final byte A  = 0;

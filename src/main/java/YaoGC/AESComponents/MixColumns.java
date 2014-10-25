@@ -2,7 +2,8 @@
 
 package YaoGC.AESComponents;
 
-import YaoGC.*;
+import YaoGC.CompositeCircuit;
+import YaoGC.State;
 
 public class MixColumns extends CompositeCircuit {
 

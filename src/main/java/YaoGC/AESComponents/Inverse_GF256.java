@@ -2,7 +2,8 @@
 
 package YaoGC.AESComponents;
 
-import YaoGC.*;
+import YaoGC.CompositeCircuit;
+import YaoGC.XOR_2L_L;
 
 class Inverse_GF256 extends CompositeCircuit {
     private static final byte Map	= 0;

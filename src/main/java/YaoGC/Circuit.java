@@ -2,8 +2,9 @@
 
 package YaoGC;
 
-import java.math.*;
-import java.io.*;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.math.BigInteger;
 
 abstract public class Circuit implements TransitiveObserver {
     public static boolean isForGarbling;

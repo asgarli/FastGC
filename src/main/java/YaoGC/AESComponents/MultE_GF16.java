@@ -2,7 +2,8 @@
 
 package YaoGC.AESComponents;
 
-import YaoGC.*;
+import YaoGC.CompositeCircuit;
+import YaoGC.XOR_2_1;
 
 class MultE_GF16 extends CompositeCircuit {
     private static final byte A  = 0;

@@ -2,9 +2,9 @@
 
 package YaoGC;
 
-import java.math.*;
+import java.math.BigInteger;
 
-import Cipher.*;
+import Cipher.Cipher;
 
 public abstract class OR_2_1 extends SimpleCircuit_2_1 {
     public OR_2_1() {

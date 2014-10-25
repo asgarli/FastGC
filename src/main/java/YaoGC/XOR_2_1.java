@@ -2,7 +2,7 @@
 
 package YaoGC;
 
-import java.math.*;
+import java.math.BigInteger;
 
 public class XOR_2_1 extends SimpleCircuit_2_1 {
     public XOR_2_1() {

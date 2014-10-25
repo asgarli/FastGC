@@ -2,7 +2,9 @@
 
 package YaoGC.AESComponents;
 
-import YaoGC.*;
+import YaoGC.CompositeCircuit;
+import YaoGC.State;
+import YaoGC.XOR_2_1;
 
 public class AddRoundKey extends CompositeCircuit {
 

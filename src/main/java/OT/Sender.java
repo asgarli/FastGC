@@ -2,8 +2,9 @@
 
 package OT;
 
-import java.math.*;
-import java.io.*;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.math.BigInteger;
 
 public abstract class Sender {
     protected int numOfPairs;
@@ -14,18 +15,18 @@ public abstract class Sender {
     protected ObjectOutputStream oos;
 
     public Sender(int numOfPairs, int msgBitLength, 
-		  ObjectInputStream in, ObjectOutputStream out) {
-	this.numOfPairs = numOfPairs;
-	this.msgBitLength = msgBitLength;
-	ois = in;
-	oos = out;
+            ObjectInputStream in, ObjectOutputStream out) {
+        this.numOfPairs = numOfPairs;
+        this.msgBitLength = msgBitLength;
+        ois = in;
+        oos = out;
     }
 
     public void execProtocol(BigInteger[][] msgPairs) throws Exception {
-	if (msgPairs.length != numOfPairs)
-	    throw new Exception("Message pair length error: " + 
-				msgPairs.length + " != " + numOfPairs);
+        if (msgPairs.length != numOfPairs)
+            throw new Exception("Message pair length error: " + 
+                    msgPairs.length + " != " + numOfPairs);
 
-	this.msgPairs = msgPairs;
+        this.msgPairs = msgPairs;
     }
 }

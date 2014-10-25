@@ -6,18 +6,18 @@ public abstract class Program {
     public static int iterCount;
 
     public void run() throws Exception {
-	init();
+        init();
 
-	for (int i = 0; i < iterCount; i++) {
-	    execute();
-	    verify_result();
-	}
+        for (int i = 0; i < iterCount; i++) {
+            execute();
+            verify_result();
+        }
     }
 
     protected void init() throws Exception {
-	createCircuits();
+        createCircuits();
 
-	initializeOT();
+        initializeOT();
     }
 
     abstract protected void createCircuits() throws Exception;
@@ -25,11 +25,11 @@ public abstract class Program {
     abstract protected void initializeOT() throws Exception;
 
     protected void execute() throws Exception {
-	execTransfer();
+        execTransfer();
 
-	execCircuit();
+        execCircuit();
 
-	interpretResult();
+        interpretResult();
     }
 
     abstract protected void execTransfer() throws Exception;

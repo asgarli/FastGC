@@ -2,8 +2,9 @@
 
 package OT;
 
-import java.math.*;
-import java.io.*;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.math.BigInteger;
 
 public abstract class Receiver {
     protected BigInteger choices;
@@ -14,16 +15,16 @@ public abstract class Receiver {
     protected BigInteger[] data = null;
 
     public Receiver(int numOfChoices, ObjectInputStream in, ObjectOutputStream out) {
-	this.numOfChoices = numOfChoices;
-	ois = in;
-	oos = out;
+        this.numOfChoices = numOfChoices;
+        ois = in;
+        oos = out;
     }
 
     public void execProtocol(BigInteger choices) throws Exception {
-	this.choices = choices;
+        this.choices = choices;
     }
 
     public BigInteger[] getData() {
-	return data;
+        return data;
     }
 }
